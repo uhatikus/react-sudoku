@@ -8,7 +8,7 @@ interface IProps {
 
 const Block: FC<IProps> = ({rowIndex, colIndex}) => {
     return (
-    <Container data-cy={`block-${rowIndex}-${colIndex}`}/>
+    <Container data-cy={`block-${rowIndex}-${colIndex}`}>0</Container>
     )
 }
 
