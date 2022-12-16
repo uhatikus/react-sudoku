@@ -16,19 +16,19 @@ describe('identifySquare', () => {
       [3, 1, 9, 3, 1, 7, 8, 5, 6],
     ]
 
-    expect(identifySquare({grid, row: 2, col: 2 })).toStrictEqual([
+    expect(identifySquare({ grid, row: 2, col: 2 })).toStrictEqual([
       [8, 4, 2],
       [5, 3, 7],
       [6, 9, 1],
     ])
 
-    expect(identifySquare({grid, row: 5, col: 5 })).toStrictEqual([
+    expect(identifySquare({ grid, row: 5, col: 5 })).toStrictEqual([
       [8, 4, 5],
       [1, 9, 2],
       [3, 7, 6],
     ])
 
-    expect(identifySquare({grid, row: 8, col: 8 })).toStrictEqual([
+    expect(identifySquare({ grid, row: 8, col: 8 })).toStrictEqual([
       [2, 3, 0],
       [7, 1, 4],
       [8, 5, 6],

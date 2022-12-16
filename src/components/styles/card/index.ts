@@ -1,7 +1,7 @@
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Card = styled.div`
-  ${({theme }) => css`
+  ${({ theme }) => css`
     background: ${theme.colors.white};
     border-radius: 20px;
     display: flex;
@@ -10,5 +10,5 @@ export const Card = styled.div`
     max-height: fit-content;
     /* max-width: fit-content; */
     padding: 15px;
-    `}
+  `}
 `

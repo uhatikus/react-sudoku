@@ -1,7 +1,7 @@
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
-  ${({theme }) => css`
+  ${({ theme }) => css`
     align-items: center;
     background-color: ${theme.colors.white};
     border: solid 1px ${theme.colors.black};
@@ -16,13 +16,13 @@ export const Container = styled.div`
     justify-content: center;
     transition: ${theme.transition};
     user-select: none;
-    &:before{
-        padding-top: 100%;
-        content: '';
-        float: left; 
+    &:before {
+      padding-top: 100%;
+      content: '';
+      float: left;
     }
-    &:hover{
+    &:hover {
       background-color: ${theme.colors.lightBlue};
     }
-    `}
+  `}
 `
