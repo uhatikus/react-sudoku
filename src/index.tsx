@@ -5,14 +5,14 @@ import { ThemeProvider } from 'styled-components'
 
 import { Provider } from 'react-redux'
 
-import { Content, Title, Card, Grid } from './components'
-import { unregister, configureStore } from './core'
+import { Content, Title, Card, Grid, Numbers, NewButton } from './components'
+import { register, configureStore } from './core'
 import { GlobalStyles, theme } from './styles'
 
 const rootElement = document.getElementById('root') as HTMLElement
 const root = createRoot(rootElement)
 
-const store = configureStore()
+const { persistor, store } = configureStore()
 
 root.render(
   <ThemeProvider theme={theme}>
@@ -21,11 +21,13 @@ root.render(
       <Content data-cy="content">
         <Title data-cy="title">Sudoku</Title>
         <Card data-cy="card">
+          <NewButton />
           <Grid />
+          <Numbers />
         </Card>
       </Content>
     </Provider>
   </ThemeProvider>
 )
 
-unregister()
+register()
