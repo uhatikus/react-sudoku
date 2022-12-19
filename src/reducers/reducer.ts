@@ -33,7 +33,7 @@ function reducer(state = initialState, action: AnyAction): IReducer {
           state.solvedGrid[action.coords[0]][action.coords[1]] != action.value
         ) {
           alert('Incorrect Option')
-          return state
+          return { ...state }
         }
         state.workingGrid[action.coords[0]][action.coords[1]] = action.value
         if (compareArrays(state.workingGrid, state.solvedGrid)) {
@@ -41,7 +41,7 @@ function reducer(state = initialState, action: AnyAction): IReducer {
           return { ...state, workingGrid: [...state.workingGrid] as GRID }
         }
       }
-      return state
+      return { ...state }
     }
     case types.SELECT_BLOCK:
       return {
